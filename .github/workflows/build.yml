@@ -12,4 +12,4 @@ jobs:
     - name: build app
       run: |
         npm i
-        npm ng build --prod
+        npm run build
