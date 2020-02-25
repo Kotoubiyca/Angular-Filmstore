@@ -301,14 +301,13 @@
 </div>
 
 <div class="content" role="main">
-  <div class="film-list">
-    <list-card 
-      *ngFor="let item of filmList; index as i"
-      [title]="item.Title"
-      [poster]="item.Images[0]"
-      [released]="item.Released"
-      [description]="item.Plot"
+  <div *ngIf="filmList" class="film-list">
+    <list-card
+      *ngFor="let item of filmList"
+      [title]="item['title']"
+      [date]="item['release_date']"
+      [poster]="item['poster_path']"
+      [overview]="item['overview']"
     ></list-card>
   </div>
 </div>
-<router-outlet></router-outlet>

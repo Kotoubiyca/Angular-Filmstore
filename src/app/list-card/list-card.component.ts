@@ -5,14 +5,13 @@ import { Input, Component } from '@angular/core';
   templateUrl: './list-card.component.html',
   styleUrls: ['./list-card.component.less']
 })
+
 export class ListCardComponent {
-   @Input() title:string;
-   @Input() poster:string;
-   @Input() released:string;
-   @Input() description:string
 
-  constructor(
-   
-  ) {}
+    @Input() title:string;
+    @Input() date:string;
+    @Input() poster:string;
+    @Input() overview:string;
 
+  constructor() {}
 }

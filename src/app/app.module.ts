@@ -8,19 +8,21 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { MatCardModule } from '@angular/material/card';
 import { ListCardComponent } from './list-card/list-card.component'
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
     AppComponent,
     ListCardComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        HttpClientModule,
+        MatButtonModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
