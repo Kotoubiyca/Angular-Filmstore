@@ -9,11 +9,15 @@ import { HttpClientModule } from '@angular/common/http'
 import { MatCardModule } from '@angular/material/card';
 import { ListCardComponent } from './list-card/list-card.component'
 import {MatButtonModule} from "@angular/material/button";
+import { FilmInfoComponent } from './film-info/film-info.component';
+import { TopRatedComponent } from './top-rated/top-rated.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListCardComponent
+    ListCardComponent,
+    FilmInfoComponent,
+    TopRatedComponent
   ],
     imports: [
         BrowserModule,

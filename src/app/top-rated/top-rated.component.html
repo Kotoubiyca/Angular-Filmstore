@@ -1,0 +1,6 @@
+<div *ngIf="filmList" class="film-list">
+    <list-card
+            *ngFor="let item of filmList"
+            [film]="item"
+    ></list-card>
+</div>
