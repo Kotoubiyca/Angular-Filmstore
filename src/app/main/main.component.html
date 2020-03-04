@@ -1,0 +1,15 @@
+<div>
+    <div *ngIf="filmList && !filmDetails" class="film-list">
+        <list-card
+                *ngFor="let item of filmList"
+                [film]="item"
+                (onDetails) = "getFullInfo($event)"
+        ></list-card>
+    </div>
+
+    <div *ngIf="filmDetails">
+        <film-details
+        [film]="filmDetails"
+        ></film-details>
+    </div>
+</div>

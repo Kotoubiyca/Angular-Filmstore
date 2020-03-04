@@ -1,12 +1,5 @@
-import {Input, Component} from '@angular/core';
-
-interface Ifilm {
-    id: number;
-    overview: string;
-    poster_path: string;
-    release_date: string;
-    title: string;
-}
+import {Input, Component, Output, EventEmitter} from '@angular/core';
+import {Film,FilmListService} from "../filmList.service";
 
 @Component({
   selector: 'list-card',
@@ -14,14 +7,14 @@ interface Ifilm {
   styleUrls: ['./list-card.component.less']
 })
 
-
-
 export class ListCardComponent {
-    @Input() film:Ifilm;
+    constructor(private filmListService: FilmListService) {}
 
-  constructor() {}
+    @Input() film: Film[]
+    @Output() onDetails: EventEmitter<number> = new EventEmitter<number>()
 
     showFullInfo() {
-        console.log(this.film)
+        this.filmListService.getFilmList(this.film['id']).subscribe(res => this.onDetails.emit(res['id']))
     }
 }
+

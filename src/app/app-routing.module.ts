@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {TopRatedComponent} from "./top-rated/top-rated.component";
+import {MainComponent} from "./main/main.component";
 
 
 const routes: Routes = [
-  { path:'', component: TopRatedComponent }
+  { path:'', component: MainComponent }
 ];
 
 @NgModule({
