@@ -30,6 +30,7 @@ export class MainComponent implements OnInit {
   }
 
   goToPage({name, key}) {
+    this.goBack()
     this.pageTitle = name
     this.filmListService.getFilmList(key).subscribe(res => this.filmList = res['results'])
   }
