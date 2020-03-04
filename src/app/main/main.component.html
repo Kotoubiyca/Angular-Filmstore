@@ -1,15 +1,35 @@
 <div>
-    <div *ngIf="filmList && !filmDetails" class="film-list">
-        <list-card
-                *ngFor="let item of filmList"
-                [film]="item"
-                (onDetails) = "getFullInfo($event)"
-        ></list-card>
-    </div>
+    <header class="header">
+        <img
+                class="logo"
+                src="//www.themoviedb.org/assets/1/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg"
+                role="presentation"
+                alt="logo">
+        <navbar (key)="goToPage($event)"></navbar>
+    </header>
+    <div class="content">
 
-    <div *ngIf="filmDetails">
-        <film-details
-        [film]="filmDetails"
-        ></film-details>
+        <div *ngIf="filmList && !filmDetails">
+            <h1 class="content-title">{{pageTitle}}</h1>
+            <div class="film-list">
+                <list-card
+                        *ngFor="let item of filmList"
+                        [film]="item"
+                        (onDetails) = "getFullInfo($event)"
+                ></list-card>
+            </div>
+        </div>
+
+        <div *ngIf="filmDetails">
+            <button
+                    mat-stroked-button
+                    color="primary"
+                    class="button-back"
+                    (click)="goBack()">Back</button>
+
+            <film-details
+            [film]="filmDetails"
+            ></film-details>
+        </div>
     </div>
 </div>

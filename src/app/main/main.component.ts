@@ -11,12 +11,26 @@ export class MainComponent implements OnInit {
 
   filmList: Film[]
   filmDetails: Film
+  pageTitle: any;
 
   ngOnInit() {
     this.filmListService.getFilmList('upcoming').subscribe(res => this.filmList = res['results'])
+    this.pageTitle = 'Upcoming'
   }
 
   getFullInfo(id) {
-    this.filmListService.getFilmList(id).subscribe(res => this.filmDetails = res)
+    this.filmListService.getFilmList(id).subscribe(res => {
+      this.filmDetails = res
+      console.log(this.filmDetails)
+    })
+  }
+
+  goBack() {
+    this.filmDetails = null
+  }
+
+  goToPage({name, key}) {
+    this.pageTitle = name
+    this.filmListService.getFilmList(key).subscribe(res => this.filmList = res['results'])
   }
 }

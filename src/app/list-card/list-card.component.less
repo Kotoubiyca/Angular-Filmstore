@@ -1,17 +1,22 @@
 :host {
-    width: 21vw;
-    margin: 0 2vw 2vw;
+    width: calc(50vw - 20px);
+    max-width: 200px;
+    margin: 10px;
     vertical-align: top;
-    min-width: 350px;
     display: flex;
 }
 
 .card {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 
-    &-buttons {
-        margin-top: auto;
-        text-align: center;
+    &-title {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 15px;
+        max-width: 160px;
+        font-weight: bold;
     }
 }

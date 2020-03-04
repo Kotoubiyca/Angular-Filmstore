@@ -1,0 +1,51 @@
+.details {
+  font-size: 14px;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #ccc;
+  }
+
+  &-title {
+    font-size: 2em;
+  }
+
+  &-vote {
+    display: flex;
+    align-items: center;
+    padding: .4em;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: .8em;
+
+    span {
+      font-weight: bold;
+      margin-left: .5em;
+      line-height: 1;
+    }
+
+    svg {
+      width: 1em;
+      height: 1em;
+    }
+  }
+
+  &-content {
+    display: flex;
+
+    &-image {
+      margin-right: 2em;
+      width: 35%;
+      min-width: 300px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

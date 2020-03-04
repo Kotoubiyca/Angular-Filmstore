@@ -11,13 +11,15 @@ import { ListCardComponent } from './list-card/list-card.component'
 import {MatButtonModule} from "@angular/material/button";
 import { MainComponent } from './main/main.component';
 import { FilmDetailsComponent } from './film-details/film-details.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListCardComponent,
     MainComponent,
-    FilmDetailsComponent
+    FilmDetailsComponent,
+    NavbarComponent
   ],
     imports: [
         BrowserModule,

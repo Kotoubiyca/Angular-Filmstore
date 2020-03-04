@@ -8,6 +8,7 @@ export interface Film {
     poster_path: string;
     release_date: string;
     title: string;
+    genres: [];
 }
 
 @Injectable({providedIn: 'root'})
