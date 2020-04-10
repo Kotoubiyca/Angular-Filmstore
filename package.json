@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod && firebase deploy",
+    "build": "ng build --prod",
+    "build-hosting": "ng build --prod && firebase deploy && rm -rf dist rm -rf .firebase",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
