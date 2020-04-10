@@ -8,4 +8,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`
 
 ### API 
 
-RestAPI from [Themoviedb](https://www.themoviedb.org/)
+RestAPI from: [Themoviedb](https://www.themoviedb.org/)
+
+Hosting URL: [AngularFilmstore](https://angularfilmstore.web.app)
