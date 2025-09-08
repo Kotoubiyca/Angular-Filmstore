@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "angularfilmstore",
     "public": "dist",
     "ignore": [
       "firebase.json",
