@@ -2,9 +2,10 @@ import {Component, Input} from '@angular/core';
 import {Film} from "../filmList.service";
 
 @Component({
-  selector: 'film-details',
-  templateUrl: './film-details.component.html',
-  styleUrls: ['./film-details.component.less']
+    selector: 'film-details',
+    templateUrl: './film-details.component.html',
+    styleUrls: ['./film-details.component.less'],
+    standalone: false
 })
 export class FilmDetailsComponent {
 

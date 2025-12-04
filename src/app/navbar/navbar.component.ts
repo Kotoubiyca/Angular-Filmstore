@@ -1,9 +1,10 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
-  selector: 'navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.less']
+    selector: 'navbar',
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.less'],
+    standalone: false
 })
 export class NavbarComponent {
   @Output() key:  EventEmitter<string> = new EventEmitter<string>()
