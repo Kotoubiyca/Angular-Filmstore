@@ -1,24 +1,30 @@
 <div class="details">
-    <div class="details-header">
-        <div class="details-title">
-            {{film['title']}} ( {{film['release_date']}} )
-        </div>
-        <div class="details-vote">
-            <svg fill="orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-            <span>{{film['vote_average']}}</span>
-        </div>
+  <div class="details-header">
+    <div class="details-title">
+      {{film['title']}} ( {{film['release_date']}} )
     </div>
+    <div class="details-vote">
+      <svg fill="orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+      <span>{{film['vote_average']}}</span>
+    </div>
+  </div>
 
-    <div class="details-content">
-        <div class="details-content-image">
-            <img src="https://image.tmdb.org/t/p/w500/{{film['poster_path']}}" alt="{{film['title']}}">
-            <div *ngIf="film['genres'].length" class="details-genres">
-                Genres:
-                <span *ngFor="let item of film['genres']; let i = index">
-                    <b>{{item['name']}}</b><span *ngIf="i < film['genres'].length - 1">, </span>
-                </span>
-            </div>
-        </div>
-        <p>{{film['overview']}}</p>
-    </div>
+  <div class="details-content">
+    <div class="details-content-image">
+      <img src="https://image.tmdb.org/t/p/w500/{{film['poster_path']}}" alt="{{film['title']}}">
+      @if (film['genres'].length) {
+        <div class="details-genres">
+          Genres:
+          @for (item of film['genres']; track item; let i = $index) {
+            <span>
+              <b>{{item['name']}}</b>@if (i < film['genres'].length - 1) {
+              <span>, </span>
+            }
+          </span>
+        }
+      </div>
+    }
+  </div>
+  <p>{{film['overview']}}</p>
+</div>
 </div>
