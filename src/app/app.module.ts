@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http'
 
-import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
+import { MatCardModule } from '@angular/material/card';
 import { ListCardComponent } from './list-card/list-card.component'
-import {MatLegacyButtonModule as MatButtonModule} from "@angular/material/legacy-button";
+import { MatButtonModule } from '@angular/material/button';
 import { MainComponent } from './main/main.component';
 import { FilmDetailsComponent } from './film-details/film-details.component';
 import { NavbarComponent } from './navbar/navbar.component';
