@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {Film, FilmListService} from "../filmList.service";
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.less']
+    selector: 'app-main',
+    templateUrl: './main.component.html',
+    styleUrls: ['./main.component.less'],
+    standalone: false
 })
 export class MainComponent implements OnInit {
   constructor(private filmListService: FilmListService) {}

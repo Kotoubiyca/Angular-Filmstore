@@ -2,9 +2,10 @@ import {Input, Component, Output, EventEmitter} from '@angular/core';
 import {Film,FilmListService} from "../filmList.service";
 
 @Component({
-  selector: 'list-card',
-  templateUrl: './list-card.component.html',
-  styleUrls: ['./list-card.component.less']
+    selector: 'list-card',
+    templateUrl: './list-card.component.html',
+    styleUrls: ['./list-card.component.less'],
+    standalone: false
 })
 
 export class ListCardComponent {
